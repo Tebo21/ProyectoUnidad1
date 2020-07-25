@@ -8,7 +8,8 @@ import {AccordionModule} from 'primeng/accordion';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';  
+import { HomeComponent } from './home/home.component';
+import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';  
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    FormularioUsuarioComponent
   ],
   imports: [
     BrowserModule,
