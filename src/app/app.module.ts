@@ -9,8 +9,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component';  
+import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usuario.component'; 
 
+import {MenubarModule} from 'primeng/menubar';
+import {ButtonModule} from 'primeng/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usua
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AccordionModule
+    AccordionModule,
+    MenubarModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
