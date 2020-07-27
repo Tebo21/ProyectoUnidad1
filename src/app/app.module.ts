@@ -17,6 +17,10 @@ import { TableModule } from 'primeng/table';
 import {MenubarModule} from 'primeng/menubar';
 import {ButtonModule} from 'primeng/button';
 import {FileUploadModule} from 'primeng/fileupload';
+import { VideoComponent } from './multimedia/video/video.component';
+import { AudioComponent } from './multimedia/audio/audio.component';
+import { DocumentosComponent } from './multimedia/documentos/documentos.component';
+import { ImagenesComponent } from './multimedia/imagenes/imagenes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,11 @@ import {FileUploadModule} from 'primeng/fileupload';
     FooterComponent,
     LoginComponent,
     HomeComponent,
-    FormularioUsuarioComponent
+    FormularioUsuarioComponent,
+    VideoComponent,
+    AudioComponent,
+    DocumentosComponent,
+    ImagenesComponent
   ],
   imports: [
     BrowserModule,
