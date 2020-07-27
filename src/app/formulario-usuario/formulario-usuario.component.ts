@@ -8,15 +8,21 @@ import * as AWS from 'aws-sdk';
   styleUrls: ['./formulario-usuario.component.css']
 })
 export class FormularioUsuarioComponent implements OnInit {
-  albumBucketName = 'practica1';
+  albumBucketName = 'rostro';
   s3 = new AWS.S3({
-  apiVersion: '2006-03-01',
-   params: { Bucket: 'practica1' },
+    apiVersion: '2006-03-01',
+    params: { Bucket: 'rostro' },
   });
 
   user: usuarios [];
 
-  constructor() { }
+  constructor() {
+    // Inicializar el proveedor de credenciales de Amazon Cognito
+    AWS.config.region = 'us-east-1'; // Región
+    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+      IdentityPoolId: 'us-east-1:e53ce7d1-41a5-4c4a-8d9e-8f9ccc70ee69',
+    });
+   }
 
   ngOnInit() {
   }

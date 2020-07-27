@@ -16,6 +16,7 @@ import { FormularioUsuarioComponent } from './formulario-usuario/formulario-usua
 import { TableModule } from 'primeng/table';
 import {MenubarModule} from 'primeng/menubar';
 import {ButtonModule} from 'primeng/button';
+import {FileUploadModule} from 'primeng/fileupload';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import {ButtonModule} from 'primeng/button';
     AccordionModule,
     MenubarModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    FileUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]
