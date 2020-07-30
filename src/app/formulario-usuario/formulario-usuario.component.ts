@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {usuarios} from '../Modelo/usuarios';
+import { usuarios } from '../Modelo/usuarios';
 import * as AWS from 'aws-sdk';
-
+import { Router } from '@angular/router';
+import { ServiceService } from '../Service/service.service';
 @Component({
   selector: 'app-formulario-usuario',
   templateUrl: './formulario-usuario.component.html',
@@ -14,17 +15,22 @@ export class FormularioUsuarioComponent implements OnInit {
     params: { Bucket: 'rostro' },
   });
 
-  user: usuarios [];
+  user: usuarios[];
 
-  constructor() {
+  constructor(private service: ServiceService, private router: Router) {
     // Inicializar el proveedor de credenciales de Amazon Cognito
     AWS.config.region = 'us-east-1'; // Región
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
       IdentityPoolId: 'us-east-1:e53ce7d1-41a5-4c4a-8d9e-8f9ccc70ee69',
     });
-   }
+  }
 
   ngOnInit() {
+    this.service.getUsers()
+      .subscribe(data => {
+        this.user = data;
+      }
+      );
   }
 
   showImagen = false;

@@ -7,8 +7,8 @@ import { usuarios } from '../Modelo/usuarios';
 })
 export class ServiceService {
 
-  constructor(private http : HttpClient ) { }
- Url="aqyui po=nga su swager";
+  constructor(private http: HttpClient ) { }
+ Url = 'http://localhost:6060/ista/usuarios';
 
  getUsers(){
    return this.http.get<usuarios[]>(this.Url);
