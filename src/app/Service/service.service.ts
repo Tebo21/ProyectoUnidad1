@@ -8,7 +8,7 @@ import { usuarios } from '../Modelo/usuarios';
 export class ServiceService {
 
   constructor(private http: HttpClient ) { }
- Url = 'http://localhost:6060/ista/usuarios';
+ Url = 'http://localhost:9094/api/usuarios';
 
  getUsers(){
    return this.http.get<usuarios[]>(this.Url);

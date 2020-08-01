@@ -25,6 +25,10 @@ import { AudioComponent } from './multimedia/audio/audio.component';
 import { DocumentosComponent } from './multimedia/documentos/documentos.component';
 import { ImagenesComponent } from './multimedia/imagenes/imagenes.component';
 import { ServiceService } from './Service/service.service';
+import { ContImagenesComponent } from './ContenidoMultimedia/cont-imagenes/cont-imagenes.component';
+import { ContVideosComponent } from './ContenidoMultimedia/cont-videos/cont-videos.component';
+import { ContDocumentosComponent } from './ContenidoMultimedia/cont-documentos/cont-documentos.component';
+import { ContAudioComponent } from './ContenidoMultimedia/cont-audio/cont-audio.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { ServiceService } from './Service/service.service';
     VideoComponent,
     AudioComponent,
     DocumentosComponent,
-    ImagenesComponent
+    ImagenesComponent,
+    ContImagenesComponent,
+    ContVideosComponent,
+    ContDocumentosComponent,
+    ContAudioComponent
   ],
   imports: [
     BrowserModule,
