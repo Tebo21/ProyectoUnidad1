@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
                 label: 'Documentos',
                 icon: 'pi pi-fw pi-file-o',
                 items: [
-                    { label: 'Ver documentos', icon: 'pi pi-fw pi-clone' },
+                    { label: 'Ver documentos', icon: 'pi pi-fw pi-clone' , routerLink: 'lista_documentos'},
                     { label: 'Subir documentos', icon: 'pi pi-fw pi-cloud-upload', routerLink: 'documentos' }
                 ]
             },

@@ -9,6 +9,7 @@ import { ContVideosComponent } from '../app/ContenidoMultimedia/cont-videos/cont
 import { ContImagenesComponent} from '../app/ContenidoMultimedia/cont-imagenes/cont-imagenes.component';
 import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
 import { HomeComponent } from './home/home.component';
+import { ContDocumentosComponent } from './ContenidoMultimedia/cont-documentos/cont-documentos.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'lista_imagenes', component: ContImagenesComponent},
   {path: 'lista_users', component: ListarUsuariosComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'lista_documentos', component: ContDocumentosComponent},
 ];
 
 @NgModule({
