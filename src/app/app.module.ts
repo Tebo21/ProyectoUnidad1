@@ -29,6 +29,7 @@ import { ContImagenesComponent } from './ContenidoMultimedia/cont-imagenes/cont-
 import { ContVideosComponent } from './ContenidoMultimedia/cont-videos/cont-videos.component';
 import { ContDocumentosComponent } from './ContenidoMultimedia/cont-documentos/cont-documentos.component';
 import { ContAudioComponent } from './ContenidoMultimedia/cont-audio/cont-audio.component';
+import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ContAudioComponent } from './ContenidoMultimedia/cont-audio/cont-audio.
     ContImagenesComponent,
     ContVideosComponent,
     ContDocumentosComponent,
-    ContAudioComponent
+    ContAudioComponent,
+    ListarUsuariosComponent
   ],
   imports: [
     BrowserModule,

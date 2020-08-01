@@ -1,4 +1,5 @@
 <div style="text-align: center;">
+    <br>
     <h3>
         Registrece
     </h3>
@@ -64,24 +65,3 @@
     <br>
 </div>
 <br>
-<h1>Tabla de prueba</h1>
-<div>
-    <p-table [value]="user">
-        <ng-template pTemplate="header">
-            <tr>
-                <th>DNI</th>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Usuario</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-user>
-            <tr>
-                <td>{{user.id}}</td>
-                <td>{{user.nombres}}</td>
-                <td>{{user.correo}}</td>
-                <td>{{user.usuario}}</td>
-            </tr>
-        </ng-template>
-    </p-table>
-</div>

@@ -7,6 +7,8 @@ import { ImagenesComponent } from './multimedia/imagenes/imagenes.component';
 import { VideoComponent } from './multimedia/video/video.component';
 import { ContVideosComponent } from '../app/ContenidoMultimedia/cont-videos/cont-videos.component';
 import { ContImagenesComponent} from '../app/ContenidoMultimedia/cont-imagenes/cont-imagenes.component';
+import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'imagenes', component: ImagenesComponent},
   {path: 'video', component: VideoComponent},
   {path: 'lista_imagenes', component: ContImagenesComponent},
+  {path: 'lista_users', component: ListarUsuariosComponent},
+  {path: 'home', component: HomeComponent},
 ];
 
 @NgModule({

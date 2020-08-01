@@ -15,7 +15,6 @@ export class FormularioUsuarioComponent implements OnInit {
     params: { Bucket: 'rostro' },
   });
 
-user: usuarios[];
 user1: usuarios = new usuarios();
   constructor(private service: ServiceService, private router: Router) {
     // Inicializar el proveedor de credenciales de Amazon Cognito
@@ -26,11 +25,7 @@ user1: usuarios = new usuarios();
   }
 
   ngOnInit() {
-    this.service.getUsers()
-      .subscribe(data => {
-        this.user = data;
-      }
-      );
+   
   }
  // variables
   showImagen = false;
