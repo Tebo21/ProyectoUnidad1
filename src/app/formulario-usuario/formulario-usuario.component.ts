@@ -15,8 +15,8 @@ export class FormularioUsuarioComponent implements OnInit {
     params: { Bucket: 'rostro' },
   });
 
-  user: usuarios[];
-
+user: usuarios[];
+user1: usuarios = new usuarios();
   constructor(private service: ServiceService, private router: Router) {
     // Inicializar el proveedor de credenciales de Amazon Cognito
     AWS.config.region = 'us-east-1'; // Región
@@ -32,7 +32,7 @@ export class FormularioUsuarioComponent implements OnInit {
       }
       );
   }
-
+ // variables
   showImagen = false;
   error = false;
   subiendo = false;
@@ -40,6 +40,7 @@ export class FormularioUsuarioComponent implements OnInit {
   archivo = null;
 
   urlImagen = null;
+  submitted = false;
 
   onClickSubir = async (event) => {
     event.preventDefault();
@@ -76,6 +77,22 @@ export class FormularioUsuarioComponent implements OnInit {
     if (event.target.files.length > 0) {
       this.archivo = event.target.files[0];
     }
+  }
+
+  save() {
+    this.service.createUsuariao(this.user1)
+    .subscribe(data => console.log(data), error => console.log(this.error));
+    this.user1 = new usuarios ();
+  }
+
+  newUser(): void{
+   this.submitted = false;
+   this.user1 = new usuarios ();
+  }
+
+  onSubmit(){
+    this.submitted = true;
+    this.save();
   }
 
 }

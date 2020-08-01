@@ -1,39 +1,52 @@
 <div style="text-align: center;">
+    <h3>
+        Registrece
+    </h3>
+    <div [hidden]="submitted" style="width: 300px;">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <br>
+                <input type="text" class="form-control" id="dni" required [(ngModel)]="user1.id" name="dni">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="nombres">Nombres</label>
+                <br>
+                <input type="text" class="form-control" id="nombres" required [(ngModel)]="user1.nombres" name="nombres">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="correo">correo</label>
+                <br>
+                <input type="text" class="form-control" id="correo" required [(ngModel)]="user1.correo" name="correo">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <br>
+                <input type="text" class="form-control" id="usuario" required [(ngModel)]="user1.usuario" name="usuario">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Contrasenia</label>
+                <br>
+                <input type="text" class="form-control" id="password" required [(ngModel)]="user1.password" name="correo">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+    <div [hidden]="!submitted">
+        <div class="alert alert-success">
+            Datos guardados
+        </div>
+        <button (click)="newUser()">Guardar</button>
+    </div>
+</div>
+<div style="text-align: center;">
     <br>
-
     <div class="" *ngIf="showImagen" style="width: 700px;" style="text-align: center;">
         <img class="rounded-circle img-thumbnail" [src]="urlImagen" alt="" />
-    </div>
-    <div class="p-field p-grid">
-        <label for="dni1" class="p-col-fixed" style="width:100px">DNI</label>
-        <div class="p-col">
-            <input id="dni1" type="text" pInputText>
-        </div>
-
-    </div>
-    <div class="p-field p-grid">
-        <label for="firstname2" class="p-col-fixed" style="width:100px">Firstname</label>
-        <div class="p-col">
-            <input id="firstname2" type="text" pInputText>
-        </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="dni1" class="p-col-fixed" style="width:100px">E-mail</label>
-        <div class="p-col">
-            <input id="dni1" type="text" pInputText>
-        </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="dni1" class="p-col-fixed" style="width:100px">Username</label>
-        <div class="p-col">
-            <input id="dni1" type="text" pInputText>
-        </div>
-    </div>
-    <div class="p-field p-grid">
-        <label for="dni1" class="p-col-fixed" style="width:100px">Password</label>
-        <div class="p-col">
-            <input id="dni1" type="text" pInputText>
-        </div>
     </div>
     <br>
     <div>
@@ -44,17 +57,11 @@
             <br />
             <button class="btn" (click)="onClickSubir($event)">Subir Imagen</button>
         </form>
-
-
-
         <div class="error" *ngIf="error">
             <h1>Error al subir la imagen de perfil</h1>
         </div>
     </div>
     <br>
-    <div>
-        <button pButton type="button" label="Guardar" icon="pi pi-upload" class="ui-button-success"></button>
-    </div>
 </div>
 <br>
 <h1>Tabla de prueba</h1>
