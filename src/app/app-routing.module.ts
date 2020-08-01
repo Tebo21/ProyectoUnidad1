@@ -5,6 +5,8 @@ import { AudioComponent } from './multimedia/audio/audio.component';
 import { DocumentosComponent } from './multimedia/documentos/documentos.component';
 import { ImagenesComponent } from './multimedia/imagenes/imagenes.component';
 import { VideoComponent } from './multimedia/video/video.component';
+import { ContVideosComponent } from '../app/ContenidoMultimedia/cont-videos/cont-videos.component';
+import { ContImagenesComponent} from '../app/ContenidoMultimedia/cont-imagenes/cont-imagenes.component';
 
 
 const routes: Routes = [
@@ -14,6 +16,7 @@ const routes: Routes = [
   {path: 'documentos', component: DocumentosComponent},
   {path: 'imagenes', component: ImagenesComponent},
   {path: 'video', component: VideoComponent},
+  {path: 'lista_imagenes', component: ContImagenesComponent},
 ];
 
 @NgModule({

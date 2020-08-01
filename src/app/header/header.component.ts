@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
                 label: 'Fotos',
                 icon: 'pi pi-fw pi-camera',
                 items: [
-                    { label: 'Ver fotos', icon: 'pi pi-fw pi-images' },
+                    { label: 'Ver fotos', icon: 'pi pi-fw pi-images' , routerLink: 'lista_imagenes'},
                     { label: 'Subir foto', icon: 'pi pi-fw pi-cloud-upload', routerLink: 'imagenes' }
                 ]
             },
