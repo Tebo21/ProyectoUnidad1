@@ -64,11 +64,12 @@ export class ContAudioComponent implements OnInit {
         var photoKey = photo.Key;
         var photoUrl = bucketUrl + encodeURIComponent(photoKey);
         return getHtml([
-          '<span>',
           '<div align="left">',
+          '<h3>' + photoKey + '</h3>',
           '<audio controls>',
           '<source src="' + photoUrl + '">',
           '</audio>',
+          '<hr>',
           '</div>',
         ]);
       });

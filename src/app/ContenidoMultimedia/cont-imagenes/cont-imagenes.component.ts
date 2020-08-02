@@ -6,7 +6,7 @@ import * as AWS from 'aws-sdk';
   styleUrls: ['./cont-imagenes.component.css']
 })
 export class ContImagenesComponent implements OnInit {
-albumBucketName = 'rostro';
+  albumBucketName = 'rostro';
   s3 = new AWS.S3({
     apiVersion: '2006-03-01',
     params: { Bucket: 'rostro' },
@@ -62,9 +62,8 @@ albumBucketName = 'rostro';
         var photoKey = photo.Key;
         var photoUrl = bucketUrl + encodeURIComponent(photoKey);
         return getHtml([
-          '<span>',
-          '<div align="center">',
-          '<img style="width:330px;height:330px;" align="left" src="' + photoUrl + '"/>',
+          '<div align="justify">',
+          '<img style="width:330px;height:330px;" align="left"  src="' + photoUrl + '"/>',
           '</div>',
         ]);
       });

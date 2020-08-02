@@ -64,9 +64,9 @@ export class ContDocumentosComponent implements OnInit {
         var photoKey = photo.Key;
         var photoUrl = bucketUrl + encodeURIComponent(photoKey);
         return getHtml([
-          '<span>',
           '<div align="left">',
-          '<a href="' + photoUrl + '">Click para descargar: "' + photoKey + '"</a>',
+          '<h3>' + photoKey + '</h3>',
+          '<a href="' + photoUrl + '">Click para descargar</a>',
           '<hr>',
           '</div>',
         ]);

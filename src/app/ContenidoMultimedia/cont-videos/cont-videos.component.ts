@@ -64,9 +64,10 @@ export class ContVideosComponent implements OnInit {
         var photoKey = photo.Key;
         var photoUrl = bucketUrl + encodeURIComponent(photoKey);
         return getHtml([
-          '<span>',
-          '<div align="left">',
-          '<video src="' + photoUrl + '" style="width:450px;height:350px;" controls="controls"  ></video>',
+          '<div align="center">',
+          '<h3>' + photoKey + '</h3>',
+          '<video src="' + photoUrl + '" style="width:450px;height:350px;" controls="controls"></video>',
+          '<hr>',
           '</div>',
         ]);
       });
