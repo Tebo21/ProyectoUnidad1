@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
             {
                 label: 'Video', icon: 'pi pi-fw pi-video',
                 items: [
-                    { label: 'Ver videos', icon: 'pi pi-fw pi-play' },
+                    { label: 'Ver videos', icon: 'pi pi-fw pi-play' , routerLink: 'lista_videos'},
                     { label: 'Subir video', icon: 'pi pi-fw pi-cloud-upload' , routerLink: 'video' }
                 ]
             },
@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
                 label: 'Audio',
                 icon: 'pi pi-fw pi-forward',
                 items: [
-                    { label: 'Audios', icon: 'pi pi-fw pi-volume-up' },
+                    { label: 'Audios', icon: 'pi pi-fw pi-volume-up' , routerLink: 'lista_audios'},
                     { label: 'Subir documentos', icon: 'pi pi-fw pi-cloud-upload', routerLink: 'audio' }
                 ]
             },
