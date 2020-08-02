@@ -66,12 +66,6 @@ albumBucketName = 'rostro';
           '<div align="center">',
           '<img style="width:330px;height:330px;" align="left" src="' + photoUrl + '"/>',
           '</div>',
-          '<div>',
-          '<span>',
-          '</span>',
-          '</div>',
-          '</span>'
-
         ]);
       });
       var message = photos.length ?

@@ -69,12 +69,6 @@ export class ContDocumentosComponent implements OnInit {
           '<a href="' + photoUrl + '">Click para descargar: "' + photoKey + '"</a>',
           '<hr>',
           '</div>',
-          '<div>',
-          '<span>',
-          '</span>',
-          '</div>',
-          '</span>'
-
         ]);
       });
       var message = photos.length ?

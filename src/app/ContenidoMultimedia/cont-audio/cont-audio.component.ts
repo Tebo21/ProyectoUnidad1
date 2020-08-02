@@ -8,10 +8,10 @@ import * as AWS from 'aws-sdk';
 })
 export class ContAudioComponent implements OnInit {
 
-  albumBucketName = 'provideos';
+  albumBucketName = 'promusica';
   s3 = new AWS.S3({
     apiVersion: '2006-03-01',
-    params: { Bucket: 'provideos' },
+    params: { Bucket: 'promusica' },
   });
 
   constructor() {
@@ -31,7 +31,7 @@ export class ContAudioComponent implements OnInit {
     const bucket = new AWS.S3(
       {
         apiVersion: '2006-03-01',
-        params: { Bucket: 'provideos' },
+        params: { Bucket: 'promusica' },
       }
     );
 
@@ -59,26 +59,22 @@ export class ContAudioComponent implements OnInit {
       }
       // 'this' references the AWS.Response instance that represents the response
       var href = this.request.httpRequest.endpoint.href;
-      var bucketUrl = href + 'provideos' + '/';
+      var bucketUrl = href + 'promusica' + '/';
       var photos = data.Contents.map(function (photo) {
         var photoKey = photo.Key;
         var photoUrl = bucketUrl + encodeURIComponent(photoKey);
         return getHtml([
           '<span>',
-          '<div align="center">',
-          '<video src="' + photoUrl + '" width="640" height="480"></video>',
+          '<div align="left">',
+          '<audio controls>',
+          '<source src="' + photoUrl + '">',
+          '</audio>',
           '</div>',
-          '<div>',
-          '<span>',
-          '</span>',
-          '</div>',
-          '</span>'
-
         ]);
       });
       var message = photos.length ?
         '' :
-        '<p>There are no videos in this album.</p>';
+        '<p>There are no audios in this album.</p>';
       var htmlTemplate = [
         message,
         '<div>',

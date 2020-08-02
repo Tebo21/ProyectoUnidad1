@@ -66,14 +66,8 @@ export class ContVideosComponent implements OnInit {
         return getHtml([
           '<span>',
           '<div align="left">',
-          '<video src="' + photoUrl + '" autoplay muted loop width="400" height="350"></video>',
+          '<video src="' + photoUrl + '" style="width:450px;height:350px;" controls="controls"  ></video>',
           '</div>',
-          '<div>',
-          '<span>',
-          '</span>',
-          '</div>',
-          '</span>'
-
         ]);
       });
       var message = photos.length ?
