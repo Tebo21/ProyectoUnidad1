@@ -3,7 +3,28 @@
     <h3>
         Registrece
     </h3>
-    <div [hidden]="submitted" style="width: 300px;">
+    <h4>Seleccione la imagen de perfil</h4>
+    <div style="text-align: center;">
+
+        <div class="" *ngIf="showImagen" style="width: 700px;" style="text-align: center;">
+            <img class="rounded-circle img-thumbnail" [src]="urlImagen" alt="" />
+        </div>
+        <br>
+        <div>
+            <form>
+                <input type="file" name="archivo" (change)="onChange($event)" />
+                <h5 *ngIf="subiendo">Subiendo imagen...</h5>
+                <br />
+                <br />
+                <button class="btn" (click)="onClickSubir($event)">Subir Imagen</button>
+            </form>
+            <div class="error" *ngIf="error">
+                <h1>Error al subir la imagen de perfil</h1>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div [hidden]="submitted" style="width: 300px;" style="text-align: center;">
         <form (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="dni">DNI</label>
@@ -34,34 +55,15 @@
                 <br>
                 <input type="text" class="form-control" id="password" required [(ngModel)]="user1.password" name="correo">
             </div>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <br>
+            <button pButton pRipple type="submit" label="Continuar ..." class="p-button-raised p-button-success"></button>
+
         </form>
     </div>
     <div [hidden]="!submitted">
-        <div class="alert alert-success">
-            Datos guardados
-        </div>
-        <button (click)="newUser()">Guardar</button>
+        <button pButton pRipple type="button" label="Guardar" class="p-button-raised p-button-success" (click)="newUser()"></button>
+
     </div>
 </div>
-<div style="text-align: center;">
-    <br>
-    <div class="" *ngIf="showImagen" style="width: 700px;" style="text-align: center;">
-        <img class="rounded-circle img-thumbnail" [src]="urlImagen" alt="" />
-    </div>
-    <br>
-    <div>
-        <form>
-            <input type="file" name="archivo" (change)="onChange($event)" />
-            <h5 *ngIf="subiendo">Subiendo imagen...</h5>
-            <br />
-            <br />
-            <button class="btn" (click)="onClickSubir($event)">Subir Imagen</button>
-        </form>
-        <div class="error" *ngIf="error">
-            <h1>Error al subir la imagen de perfil</h1>
-        </div>
-    </div>
-    <br>
-</div>
+
 <br>
