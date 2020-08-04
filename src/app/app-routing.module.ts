@@ -11,6 +11,7 @@ import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.compo
 import { HomeComponent } from './home/home.component';
 import { ContDocumentosComponent } from './ContenidoMultimedia/cont-documentos/cont-documentos.component';
 import { ContAudioComponent } from './ContenidoMultimedia/cont-audio/cont-audio.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'lista_documentos', component: ContDocumentosComponent},
   {path: 'lista_videos', component: ContVideosComponent },
   {path: 'lista_audios', component: ContAudioComponent},
+  {path: 'login', component: LoginComponent},
 ];
 
 @NgModule({

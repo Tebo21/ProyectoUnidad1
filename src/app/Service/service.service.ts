@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ServiceService {
 
   constructor(private http: HttpClient ) { }
- Url = 'http://localhost:9094/api/usuarios';
+ Url = 'http://localhost:8080/api/usuarios';
 
  getUsers(){
    return this.http.get<usuarios[]>(this.Url);
@@ -19,4 +19,10 @@ export class ServiceService {
  createUsuariao(usuarios: Object): Observable<Object>{
   return this.http.post(`${this.Url}` + `/create`, usuarios)
  }
+ getValidar(usuario: String, password: String) {
+    return this.http.get<usuarios[]>(this.Url);
+  }
+  getByUserId(userName : String ,observe?:any=''){
+      }
+
 }

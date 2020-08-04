@@ -19,6 +19,8 @@ import {MenubarModule} from 'primeng/menubar';
 import {ButtonModule} from 'primeng/button';
 import {FileUploadModule} from 'primeng/fileupload';
 import {CardModule} from 'primeng/card';
+import {PasswordModule} from 'primeng/password';
+import {InputTextModule} from 'primeng/inputtext';
 
 import { VideoComponent } from './multimedia/video/video.component';
 import { AudioComponent } from './multimedia/audio/audio.component';
@@ -59,7 +61,9 @@ import { ListarUsuariosComponent } from './listar-usuarios/listar-usuarios.compo
     FileUploadModule,
     CardModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PasswordModule,
+    InputTextModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]
