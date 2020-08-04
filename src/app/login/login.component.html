@@ -1,15 +1,15 @@
 <form action="" style="max-width: 400px; margin: 0 auto;">
     <div>
-        <h2>Login Usuario</h2>
-        <p>Usuario:
-            <input style="margin: 20px" type="text" id="usuario_in" name="usuario" class="form-control" placeholder="Usuario" [(ngModel)]="selecUser" required>
-        </p>
-        <p>Contraseña:
-            <input style="margin: 20px" type="text" id="password_in" name="password" class="form-control" placeholder="Password" [(ngModel)]="selectContra" required>
-        </p>
+        <br>
+        <div class="form-group">
+            <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" [(ngModel)]="selecUser" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="selectContra" required>
+        </div>
 
-
-        <button pButton type="button" label="Ingresar" class="ui-button-raised ui-button-warning" (click)="validaLogin()"></button>
+        <button pButton type="button" label="Ingresar" class="ui-button-raised ui-button-warning" (click)="onLogin()"></button>
     </div>
 
 
