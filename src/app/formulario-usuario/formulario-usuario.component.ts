@@ -83,7 +83,7 @@ user1: usuarios = new usuarios();
   newUser(): void{
    this.submitted = false;
    this.user1 = new usuarios ();
-   this.router.navigate(['home']);
+   this.router.navigate(['login']);
    alert ('Registro correcto...');
   }
 
