@@ -69,7 +69,7 @@ export class ContImagenesComponent implements OnInit {
       });
       var message = photos.length ?
         '' :
-        '<p>There are no photos in this album.</p>';
+        '<p>No hay imagenes disponibles.</p>';
       var htmlTemplate = [
         message,
         '<div>',

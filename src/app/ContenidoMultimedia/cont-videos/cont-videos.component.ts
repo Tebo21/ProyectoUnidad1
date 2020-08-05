@@ -73,7 +73,7 @@ export class ContVideosComponent implements OnInit {
       });
       var message = photos.length ?
         '' :
-        '<p>There are no videos in this album.</p>';
+        '<p>No hay videos disponibles.</p>';
       var htmlTemplate = [
         message,
         '<div>',

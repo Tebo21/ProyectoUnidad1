@@ -75,7 +75,7 @@ export class ContAudioComponent implements OnInit {
       });
       var message = photos.length ?
         '' :
-        '<p>There are no audios in this album.</p>';
+        '<p>No hay audios disponibles.</p>';
       var htmlTemplate = [
         message,
         '<div>',
