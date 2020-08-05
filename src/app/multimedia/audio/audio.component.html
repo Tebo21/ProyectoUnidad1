@@ -11,7 +11,7 @@
 <div class="container" style="text-align: center;">
     <br>
     <form>
-        <input type="file" name="archivo" (change)="onChange($event)" />
+        <input type="file" name="archivo" (change)="onChange($event)" accept=".mp3" />
         <h5 *ngIf="subiendo">Subiendo audio...</h5>
         <br />
         <br />
