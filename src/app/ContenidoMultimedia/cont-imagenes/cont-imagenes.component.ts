@@ -60,7 +60,6 @@ export class ContImagenesComponent implements OnInit {
       var bucketUrl = href + 'rostro' + '/';
       var photos = data.Contents.map(function (photo) {
         var photoKey = photo.Key;
-        console.log("asfdggggggggggggggggggggggggg"+photoKey);
         var photoUrl = bucketUrl + encodeURIComponent(photoKey);
         return getHtml([
           '<div align="justify">',

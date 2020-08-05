@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   enviarContra = '';
   selecUser = '';
   selectContra = '';
-  lista_usuarios = new Array<any>();
+  lista_usuarios = new Array<usuarios>();
   ngOnInit(): void {
   }
 
@@ -30,8 +30,11 @@ export class LoginComponent implements OnInit {
 
     return this.service.getValidar(this.enviarUsuario, this.enviarContra).subscribe(
       data => {
+        this.lista_usuarios = data;
         console.log(data);
+        
         if ((this.enviarUsuario === data[0].usuario) && ( this.enviarContra === data[0].password)) {
+        //if ((this.enviarUsuario === this.lista_usuarios[usuarios])){
           this.router.navigate(['/home']);
           alert('Bienvenido!');
         } else {
