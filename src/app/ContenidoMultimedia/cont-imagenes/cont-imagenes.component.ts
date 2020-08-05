@@ -29,7 +29,7 @@ export class ContImagenesComponent implements OnInit {
     const bucket = new AWS.S3(
       {
         apiVersion: '2006-03-01',
-        params: { Bucket: 'rostro' },
+        params: { Bucket: 'proimagen' },
       }
     );
 
