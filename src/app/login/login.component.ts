@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
         console.log(data);
         
         if ((this.enviarUsuario === data[0].usuario) && ( this.enviarContra === data[0].password)) {
-        //if ((this.enviarUsuario === this.lista_usuarios[usuarios])){
           this.router.navigate(['/home']);
           alert('Bienvenido!');
         } else {

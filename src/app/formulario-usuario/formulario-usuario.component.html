@@ -1,8 +1,10 @@
 <div style="text-align: center;">
     <br>
+    <hr>
     <h3>
-        Registrece
+        Reegristro de nuevo usuario:
     </h3>
+    <hr>
     <h4>Seleccione la imagen de perfil</h4>
     <div style="text-align: center;">
 
@@ -12,12 +14,12 @@
         <br>
         <div>
             <form>
-                <input type="file" name="archivo" (change)="onChange($event)" />
+                <input type="file" name="archivo" (change)="onChange($event)" accept=".jpg,.png,.jpeg,.jfif" />
                 <h5 *ngIf="subiendo">Subiendo imagen...</h5>
-                <br />
+                <br>
                 <label for="dni">URL: </label>
                 <input type="text" name="url" id="url" required [(ngModel)]="user1.url">
-                <br />
+                <br>
                 <button class="btn" (click)="onClickSubir($event)">Subir Imagen</button>
             </form>
             <div class="error" *ngIf="error">
@@ -28,34 +30,40 @@
     </div>
     <div [hidden]="submitted" style="width: 300px;" style="text-align: center;">
         <form (ngSubmit)="onSubmit()">
-            <div class="form-group">
-                <label for="dni">DNI</label>
-                <br>
-                <input type="text" class="form-control" id="dni" required [(ngModel)]="user1.id" name="dni" required>
+            <div class="p-col-12 p-md-4">
+                <div class="p-inputgroup" for="dni">
+                    <span class="p-inputgroup-addon"><i class="pi pi-id-card"></i></span>
+                    <input type="text" pInputText placeholder="DNI" id="dni" required [(ngModel)]="user1.id" name="dni" required>
+                </div>
             </div>
             <br>
-            <div class="form-group">
-                <label for="nombres">Nombres</label>
-                <br>
-                <input type="text" class="form-control" id="nombres" required [(ngModel)]="user1.nombres" name="nombres" required>
+            <div class="p-col-12 p-md-4">
+                <div class="p-inputgroup" for="nombres">
+                    <span class="p-inputgroup-addon"><i class="pi pi-pencil"></i></span>
+                    <input type="text" pInputText placeholder="Nombres y Apellidos" id="nombres" required [(ngModel)]="user1.nombres" name="nombres" required>
+                </div>
             </div>
             <br>
-            <div class="form-group">
-                <label for="correo">correo</label>
-                <br>
-                <input type="text" class="form-control" id="correo" required [(ngModel)]="user1.correo" name="correo" required>
+            <div class="p-col-12 p-md-4">
+                <div class="p-inputgroup" for="correo">
+                    <span class="p-inputgroup-addon"><i class="pi pi-bookmark"></i></span>
+                    <input type="text" pInputText placeholder="Ingrese su correo: example@gmail.com" id="correo" required [(ngModel)]="user1.correo" name="correo" required>
+                </div>
             </div>
             <br>
-            <div class="form-group">
-                <label for="usuario">Usuario</label>
-                <br>
-                <input type="text" class="form-control" id="usuario" required [(ngModel)]="user1.usuario" name="usuario" required>
+            <div class="p-col-12 p-md-4">
+                <div class="p-inputgroup" for="usuario">
+                    <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                    <input type="text" pInputText placeholder="Usuario" id="usuario" required [(ngModel)]="user1.usuario" name="usuario" required>
+                </div>
             </div>
             <br>
-            <div class="form-group">
-                <label for="password">Contrasenia</label>
+            <div class="p-col-12 p-md-4">
                 <br>
-                <input type="text" class="form-control" id="password" required [(ngModel)]="user1.password" name="correo" required>
+                <div class="p-inputgroup" for="usuario">
+                    <span class="p-inputgroup-addon"><i class="pi pi-check-circle"></i></span>
+                    <input type="password" pPassword id="password" placeholder="Ingrese su password" required [(ngModel)]="user1.password" name="correo" required />
+                </div>
             </div>
             <br>
             <button pButton pRipple type="submit" label="Continuar ..." class="p-button-raised p-button-success"></button>

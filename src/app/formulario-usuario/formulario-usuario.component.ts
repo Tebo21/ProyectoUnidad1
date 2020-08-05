@@ -31,10 +31,11 @@ user1: usuarios = new usuarios();
   showImagen = false;
   error = false;
   subiendo = false;
+
   archivo = null;
+
   urlImagen = null;
   submitted = false;
-
 
   onClickSubir = async (event) => {
     event.preventDefault();
@@ -51,13 +52,10 @@ user1: usuarios = new usuarios();
             ACL: 'public-read',
           },
         }).promise();
-         
-        this.urlImagen = data.Location;
-        console.log("Direccion de la imagen:" +this.archivo.name);
 
+        this.urlImagen = data.Location;
         this.subiendo = false;
         this.showImagen = true;
-        this.user1.url=this.archivo.name;
       } catch (error) {
         this.error = true;
         const bucle = setInterval(() => {
@@ -93,4 +91,5 @@ user1: usuarios = new usuarios();
     this.submitted = true;
     this.save();
   }
+
 }
