@@ -7,10 +7,10 @@ import * as AWS from 'aws-sdk';
 })
 export class VideoComponent implements OnInit {
 
-  albumBucketName = 'provideo';
+  albumBucketName = 'provideos';
   s3 = new AWS.S3({
     apiVersion: '2006-03-01',
-    params: { Bucket: 'provideo' },
+    params: { Bucket: 'provideos' },
   });
 
   constructor() {
@@ -67,5 +67,4 @@ export class VideoComponent implements OnInit {
       this.archivo = event.target.files[0];
     }
   };
-
 }
