@@ -13,7 +13,7 @@ export class ServiceService {
   headers: HttpHeaders = new HttpHeaders({
     "Content-Type": "application/json"
   });
- Url = 'http://localhost:9094/api/usuarios';
+ Url = 'http://34.229.61.206/api/usuarios';
 
  getUsers(){
    return this.http.get<usuarios[]>(this.Url);
