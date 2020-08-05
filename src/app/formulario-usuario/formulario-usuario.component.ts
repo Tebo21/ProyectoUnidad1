@@ -56,6 +56,7 @@ user1: usuarios = new usuarios();
         this.urlImagen = data.Location;
         this.subiendo = false;
         this.showImagen = true;
+        this.user1.url=this.archivo.name;
       } catch (error) {
         this.error = true;
         const bucle = setInterval(() => {
