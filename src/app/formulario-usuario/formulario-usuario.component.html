@@ -15,6 +15,8 @@
                 <input type="file" name="archivo" (change)="onChange($event)" />
                 <h5 *ngIf="subiendo">Subiendo imagen...</h5>
                 <br />
+                <label for="dni">URL: </label>
+                <input type="text" name="url" id="url" required [(ngModel)]="user1.url">
                 <br />
                 <button class="btn" (click)="onClickSubir($event)">Subir Imagen</button>
             </form>

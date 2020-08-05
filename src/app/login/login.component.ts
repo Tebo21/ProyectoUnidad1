@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
 
     return this.service.getValidar(this.enviarUsuario, this.enviarContra).subscribe(
       data => {
-        this.lista_usuarios[0] = data;
         console.log(data);
         if ((this.enviarUsuario === data[0].usuario) && ( this.enviarContra === data[0].password)) {
           this.router.navigate(['/home']);

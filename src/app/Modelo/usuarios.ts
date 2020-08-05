@@ -4,4 +4,5 @@ nombres?: string;
 correo?: string;
 usuario?: string;
 password?:string;
+url?:string;
 }

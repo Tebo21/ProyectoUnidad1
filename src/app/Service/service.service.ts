@@ -26,6 +26,9 @@ export class ServiceService {
  getValidar(usuario: string, password: string) {
     return this.http.get<usuarios[]>(this.Url);
   }
+  getFoto(url_foto: string) {
+    return this.http.get<usuarios[]>(this.Url);
+  }
 
 
 
