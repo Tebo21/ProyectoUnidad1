@@ -8,7 +8,7 @@ import * as AWS from 'aws-sdk';
 })
 export class ImagenesComponent implements OnInit {
 
-  
+ // sube los archivos de imagenes al bucket
   albumBucketName = 'proimagen';
   s3 = new AWS.S3({
     apiVersion: '2006-03-01',

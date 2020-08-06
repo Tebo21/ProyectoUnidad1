@@ -5,6 +5,7 @@ import * as AWS from 'aws-sdk';
   templateUrl: './audio.component.html',
   styleUrls: ['./audio.component.css']
 })
+ // sube los archivos de audio al bucket
 export class AudioComponent implements OnInit {
 
   albumBucketName = 'promusica';

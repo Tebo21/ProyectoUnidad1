@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  // recupera el usuario y contrasenia para ingresar al sistema
   constructor(private service: ServiceService, private router: Router) { }
   private user: usuarios = {
     usuario: "",

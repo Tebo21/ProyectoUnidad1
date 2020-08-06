@@ -7,6 +7,7 @@ import * as AWS from 'aws-sdk';
 })
 export class VideoComponent implements OnInit {
 
+ // sube los archivos de video al bucket
   albumBucketName = 'provideos';
   s3 = new AWS.S3({
     apiVersion: '2006-03-01',

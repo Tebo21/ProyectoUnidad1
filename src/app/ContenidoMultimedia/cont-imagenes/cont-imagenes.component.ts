@@ -5,11 +5,12 @@ import * as AWS from 'aws-sdk';
   templateUrl: './cont-imagenes.component.html',
   styleUrls: ['./cont-imagenes.component.css']
 })
+// ayuda a recibir las imagenes del bucket
 export class ContImagenesComponent implements OnInit {
-  albumBucketName = 'rostro';
+  albumBucketName = 'proimagenes';
   s3 = new AWS.S3({
     apiVersion: '2006-03-01',
-    params: { Bucket: 'rostro' },
+    params: { Bucket: 'proimagenes' },
   });
 
   constructor() {

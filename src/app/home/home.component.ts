@@ -8,6 +8,7 @@ import * as AWS from 'aws-sdk';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   albumBucketName = 'rostro';
   s3 = new AWS.S3({
@@ -15,8 +16,14 @@ export class HomeComponent implements OnInit {
     params: { Bucket: 'rostro' },
   });
 
-
-  constructor(private router: Router,private service: ServiceService) { 
+  showImagen = false;
+  archivo = null
+  urlImagen = null;
+  error = false;
+  imagenes = new Array<any>();
+  url_foto = '';
+  selecFoto = '';
+  constructor(private router: Router, private service: ServiceService) {
     // Inicializar el proveedor de credenciales de Amazon Cognito
     AWS.config.region = 'us-east-1'; // Región
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
@@ -28,14 +35,12 @@ export class HomeComponent implements OnInit {
     this.muestraFoto();
   }
 
-  url_foto = '';
-  selecFoto = '';
-  muestraFoto(){
-
+  // mostramos la foto de perfil en el home en al parte derecha
+  muestraFoto() {s
     return this.service.getFoto(this.url_foto).subscribe(
       data => {
         console.log(data[0].url);
-       this.selecFoto=data[0].url;
+        this.selecFoto = data[0].url;
       },
       error => console.log(error));
   }
@@ -49,15 +54,7 @@ export class HomeComponent implements OnInit {
 
     return bucket;
   }
-
-  
-  showImagen = false;
-  archivo = null
-  urlImagen = null;
-  error = false;
-  imagenes = new Array<any>();
-
-  resgitrarce(){
+  resgitrarce() {
     this.router.navigate(['registro'])
   }
 

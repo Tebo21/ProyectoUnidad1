@@ -6,6 +6,8 @@ import * as AWS from 'aws-sdk';
   templateUrl: './cont-videos.component.html',
   styleUrls: ['./cont-videos.component.css']
 })
+
+// ayuda a recibir los videos del bucket
 export class ContVideosComponent implements OnInit {
 
   albumBucketName = 'provideos';

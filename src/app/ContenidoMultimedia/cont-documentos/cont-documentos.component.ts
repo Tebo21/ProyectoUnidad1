@@ -7,7 +7,7 @@ import * as AWS from 'aws-sdk';
   styleUrls: ['./cont-documentos.component.css']
 })
 export class ContDocumentosComponent implements OnInit {
-
+  // ayuda a recibir los docuemntos del bucket
   albumBucketName = 'prodocumentos';
   s3 = new AWS.S3({
     apiVersion: '2006-03-01',

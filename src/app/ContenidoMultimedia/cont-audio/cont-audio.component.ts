@@ -7,7 +7,7 @@ import * as AWS from 'aws-sdk';
   styleUrls: ['./cont-audio.component.css']
 })
 export class ContAudioComponent implements OnInit {
-
+ // ayuda a recibir los archivos de musica del bucket
   albumBucketName = 'promusica';
   s3 = new AWS.S3({
     apiVersion: '2006-03-01',
@@ -15,7 +15,6 @@ export class ContAudioComponent implements OnInit {
   });
 
   constructor() {
-    // Inicializar el proveedor de credenciales de Amazon Cognito
     AWS.config.region = 'us-east-1'; // Región
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
       IdentityPoolId: 'us-east-1:e53ce7d1-41a5-4c4a-8d9e-8f9ccc70ee69',

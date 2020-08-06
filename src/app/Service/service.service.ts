@@ -8,18 +8,17 @@ import { map } from "rxjs/operators";
   providedIn: 'root'
 })
 export class ServiceService {
-
+  
+  // aqui se realiza la coneccio al servicio usando ela direccion ofrecida por la instancia en EC2
   constructor(private http: HttpClient ) { }
   headers: HttpHeaders = new HttpHeaders({
     "Content-Type": "application/json"
   });
- Url = 'http://34.229.61.206/api/usuarios';
+ Url = 'http://52.90.208.140/api/usuarios';
 
  getUsers(){
    return this.http.get<usuarios[]>(this.Url);
  }
- // tslint:disable-next-line: no-shadowed-variable
- // tslint:disable-next-line: ban-types
  createUsuariao(usuarios: Object): Observable<Object>{
   return this.http.post(`${this.Url}` + `/create`, usuarios)
  }

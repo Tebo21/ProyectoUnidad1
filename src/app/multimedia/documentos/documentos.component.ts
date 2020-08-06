@@ -6,6 +6,8 @@ import * as AWS from 'aws-sdk';
   templateUrl: './documentos.component.html',
   styleUrls: ['./documentos.component.css']
 })
+
+ // sube los documentos al buckets
 export class DocumentosComponent implements OnInit {
 
   albumBucketName = 'prodocumentos';
